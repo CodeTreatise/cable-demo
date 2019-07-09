@@ -1,0 +1,15 @@
+@mixin font-face($family, $path, $style:null, $weight: null) {
+
+  $src: null;
+  $ext: '.ttf';
+  $format: 'truetype';
+  $src: append($src, url(quote("/assets/fonts/"+$family+"/"+$family+-$style +$ext))format(quote($format)),
+      comma);
+
+  @font-face {
+      font-family: quote($family);
+      font-style: $style;
+      font-weight: $weight;
+      src: $src;
+  }
+}

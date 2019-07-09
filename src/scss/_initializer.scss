@@ -1,0 +1,36 @@
+@import "./variables";
+@import "./fonts";
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: $background;
+  font-family: "Roboto", Helvetica, Arial, sans-serif !important;
+  font-style: normal;
+  font-weight: lighter;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+[href*="tel:"],
+[href*="mailto:"] {
+  color: rgb(85, 26, 139);
+  :active {
+    color: rgb(255, 0, 0) !important;
+  }
+}

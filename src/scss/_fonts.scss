@@ -1,0 +1,21 @@
+@import "./mixins";
+
+// @include font-face(Roboto, fonts/roboto, Black);
+// @include font-face(Oxygen, fonts/oxygen, Regular);
+// @include font-face(Quicksand, fonts/quicksand, Medium);
+
+@font-face {
+  font-family: "Roboto";
+  font-style: Black;
+  src: url("/assets/fonts/Roboto/Roboto-Black.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Oxygen";
+  font-style: Regular;
+  src: url("/assets/fonts/Oxygen/Oxygen-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Quicksand";
+  font-style: Medium;
+  src: url("/assets/fonts/Quicksand/Quicksand-Medium.ttf") format("truetype");
+}

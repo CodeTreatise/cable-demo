@@ -1,0 +1,45 @@
+<mat-toolbar fxLayout>
+  <div class="sm-nav" fxHide.gt-xs>
+    <button mat-mini-fab color="accent" (click)="onToggleSidenav()">
+      <mat-icon>menu</mat-icon>
+    </button>
+  </div>
+  <div class="logo" fxHide.xs>
+    <a href="#">
+      <img src="assets/images/ct.svg" alt="">
+    </a>
+  </div>
+  <div class="nav" fxFlex fxLayoutAlign="start" fxHide.xs>
+    <button mat-button color="accent">About</button>
+    <button mat-button color="accent" [matMenuTriggerFor]="product">
+      <span>Digital Cable TV</span>
+      <mat-icon>arrow_drop_down</mat-icon>
+    </button>
+    <mat-menu #product="matMenu">
+      <button mat-menu-item color="accent">Fibar Tv</button>
+      <button mat-menu-item color="accent">Cable TV</button>
+      <button mat-menu-item color="accent">Fibar Broadband</button>
+    </mat-menu>
+    <button mat-button color="accent" [matMenuTriggerFor]="customer">
+      <span>Customer Support</span>
+      <mat-icon>arrow_drop_down</mat-icon>
+    </button>
+    <mat-menu #customer="matMenu">
+      <button mat-menu-item color="accent">Subscription Form</button>
+      <button mat-menu-item color="accent">TRAI Compilances</button>
+      <button mat-menu-item color="accent">FAQ's</button>
+    </mat-menu>
+    <button mat-button color="accent">Contact Us</button>
+  </div>
+  <div class="login" fxFlex fxLayoutAlign="end">
+    <button mat-button [matMenuTriggerFor]="menu" color="accent">
+      <span>Login</span>
+      <mat-icon>arrow_drop_down</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item color="accent">SMO</button>
+      <button mat-menu-item color="accent">Operator</button>
+      <button mat-menu-item color="accent">Customer</button>
+    </mat-menu>
+  </div>
+</mat-toolbar>
